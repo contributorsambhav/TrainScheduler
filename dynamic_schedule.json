@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-24T22:36:29.149178",
+    "solver_status": "Optimal",
+    "model_type": "Dynamic Headway Scheduling",
+    "min_headway_minutes": 1.0,
+    "safety_margin": 1.5,
+    "total_trains": 4,
+    "total_sections": 6,
+    "total_stations": 4
+  },
+  "stations": {
+    "1": "Station 1",
+    "2": "Station 2",
+    "3": "Station 3",
+    "4": "Station 4"
+  },
+  "sections": {
+    "1": {
+      "from_station": 1,
+      "to_station": 2,
+      "from_station_name": "Station 1",
+      "to_station_name": "Station 2",
+      "distance_km": 105,
+      "max_speed_kmh": 35
+    },
+    "2": {
+      "from_station": 2,
+      "to_station": 1,
+      "from_station_name": "Station 2",
+      "to_station_name": "Station 1",
+      "distance_km": 105,
+      "max_speed_kmh": 35
+    },
+    "3": {
+      "from_station": 1,
+      "to_station": 3,
+      "from_station_name": "Station 1",
+      "to_station_name": "Station 3",
+      "distance_km": 180,
+      "max_speed_kmh": 60
+    },
+    "4": {
+      "from_station": 3,
+      "to_station": 1,
+      "from_station_name": "Station 3",
+      "to_station_name": "Station 1",
+      "distance_km": 180,
+      "max_speed_kmh": 60
+    },
+    "5": {
+      "from_station": 1,
+      "to_station": 4,
+      "from_station_name": "Station 1",
+      "to_station_name": "Station 4",
+      "distance_km": 135,
+      "max_speed_kmh": 45
+    },
+    "6": {
+      "from_station": 4,
+      "to_station": 1,
+      "from_station_name": "Station 4",
+      "to_station_name": "Station 1",
+      "distance_km": 135,
+      "max_speed_kmh": 45
+    }
+  },
+  "train_results": {
+    "1": {
+      "train_id": 1,
+      "start_station": 2,
+      "end_station": 4,
+      "start_station_name": "Station 2",
+      "end_station_name": "Station 4",
+      "max_speed_kmh": 100,
+      "priority_score": 50.0,
+      "base_travel_time_minutes": 360.0,
+      "is_stopped": false,
+      "actual_completion_time_minutes": 366.0,
+      "delay_minutes": 6.0,
+      "path_sections": [
+        2,
+        5
+      ],
+      "schedule": [
+        {
+          "section_id": 2,
+          "from_station": 2,
+          "to_station": 1,
+          "from_station_name": "Station 2",
+          "to_station_name": "Station 1",
+          "distance_km": 105,
+          "actual_speed_kmh": 35,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 184.0,
+          "travel_time_minutes": 184.0,
+          "entry_time_seconds": 0,
+          "exit_time_seconds": 11040.0
+        },
+        {
+          "section_id": 5,
+          "from_station": 1,
+          "to_station": 4,
+          "from_station_name": "Station 1",
+          "to_station_name": "Station 4",
+          "distance_km": 135,
+          "actual_speed_kmh": 45,
+          "entry_time_minutes": 186.0,
+          "exit_time_minutes": 366.0,
+          "travel_time_minutes": 180.0,
+          "entry_time_seconds": 11160.0,
+          "exit_time_seconds": 21960.0
+        }
+      ],
+      "section_speeds": {
+        "2": 35,
+        "5": 45
+      }
+    },
+    "2": {
+      "train_id": 2,
+      "start_station": 4,
+      "end_station": 3,
+      "start_station_name": "Station 4",
+      "end_station_name": "Station 3",
+      "max_speed_kmh": 90,
+      "priority_score": 45.0,
+      "base_travel_time_minutes": 360.0,
+      "is_stopped": false,
+      "actual_completion_time_minutes": 370.0,
+      "delay_minutes": 10.0,
+      "path_sections": [
+        6,
+        3
+      ],
+      "schedule": [
+        {
+          "section_id": 6,
+          "from_station": 4,
+          "to_station": 1,
+          "from_station_name": "Station 4",
+          "to_station_name": "Station 1",
+          "distance_km": 135,
+          "actual_speed_kmh": 45,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 188.0,
+          "travel_time_minutes": 188.0,
+          "entry_time_seconds": 0,
+          "exit_time_seconds": 11280.0
+        },
+        {
+          "section_id": 3,
+          "from_station": 1,
+          "to_station": 3,
+          "from_station_name": "Station 1",
+          "to_station_name": "Station 3",
+          "distance_km": 180,
+          "actual_speed_kmh": 60,
+          "entry_time_minutes": 190.0,
+          "exit_time_minutes": 370.0,
+          "travel_time_minutes": 180.0,
+          "entry_time_seconds": 11400.0,
+          "exit_time_seconds": 22200.0
+        }
+      ],
+      "section_speeds": {
+        "6": 45,
+        "3": 60
+      }
+    },
+    "3": {
+      "train_id": 3,
+      "start_station": 3,
+      "end_station": 2,
+      "start_station_name": "Station 3",
+      "end_station_name": "Station 2",
+      "max_speed_kmh": 100,
+      "priority_score": 50.0,
+      "base_travel_time_minutes": 360.0,
+      "is_stopped": false,
+      "actual_completion_time_minutes": 362.0,
+      "delay_minutes": 2.0,
+      "path_sections": [
+        4,
+        1
+      ],
+      "schedule": [
+        {
+          "section_id": 4,
+          "from_station": 3,
+          "to_station": 1,
+          "from_station_name": "Station 3",
+          "to_station_name": "Station 1",
+          "distance_km": 180,
+          "actual_speed_kmh": 60,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 180.0,
+          "travel_time_minutes": 180.0,
+          "entry_time_seconds": 0,
+          "exit_time_seconds": 10800.0
+        },
+        {
+          "section_id": 1,
+          "from_station": 1,
+          "to_station": 2,
+          "from_station_name": "Station 1",
+          "to_station_name": "Station 2",
+          "distance_km": 105,
+          "actual_speed_kmh": 35,
+          "entry_time_minutes": 182.0,
+          "exit_time_minutes": 362.0,
+          "travel_time_minutes": 180.0,
+          "entry_time_seconds": 10920.0,
+          "exit_time_seconds": 21720.0
+        }
+      ],
+      "section_speeds": {
+        "4": 60,
+        "1": 35
+      }
+    },
+    "4": {
+      "train_id": 4,
+      "start_station": 2,
+      "end_station": 4,
+      "start_station_name": "Station 2",
+      "end_station_name": "Station 4",
+      "max_speed_kmh": 25,
+      "priority_score": 12.5,
+      "base_travel_time_minutes": 576.0,
+      "is_stopped": false,
+      "actual_completion_time_minutes": 580.0,
+      "delay_minutes": 4.0,
+      "path_sections": [
+        2,
+        5
+      ],
+      "schedule": [
+        {
+          "section_id": 2,
+          "from_station": 2,
+          "to_station": 1,
+          "from_station_name": "Station 2",
+          "to_station_name": "Station 1",
+          "distance_km": 105,
+          "actual_speed_kmh": 25,
+          "entry_time_minutes": 2.0,
+          "exit_time_minutes": 254.0,
+          "travel_time_minutes": 252.0,
+          "entry_time_seconds": 120.0,
+          "exit_time_seconds": 15240.0
+        },
+        {
+          "section_id": 5,
+          "from_station": 1,
+          "to_station": 4,
+          "from_station_name": "Station 1",
+          "to_station_name": "Station 4",
+          "distance_km": 135,
+          "actual_speed_kmh": 25,
+          "entry_time_minutes": 256.0,
+          "exit_time_minutes": 580.0,
+          "travel_time_minutes": 324.0,
+          "entry_time_seconds": 15360.0,
+          "exit_time_seconds": 34800.0
+        }
+      ],
+      "section_speeds": {
+        "2": 25,
+        "5": 25
+      }
+    }
+  },
+  "section_usage": {
+    "1": {
+      "section_id": 1,
+      "from_station": 1,
+      "to_station": 2,
+      "route_name": "Station 1 → Station 2",
+      "distance_km": 105,
+      "max_speed_kmh": 35,
+      "trains_using": [
+        3
+      ],
+      "utilization_count": 1,
+      "utilization_rate": 0.25,
+      "train_schedules": [
+        {
+          "train_id": 3,
+          "entry_time_minutes": 182.0,
+          "exit_time_minutes": 362.0,
+          "speed_kmh": 35,
+          "priority": 50.0
+        }
+      ],
+      "headway_analysis": []
+    },
+    "2": {
+      "section_id": 2,
+      "from_station": 2,
+      "to_station": 1,
+      "route_name": "Station 2 → Station 1",
+      "distance_km": 105,
+      "max_speed_kmh": 35,
+      "trains_using": [
+        1,
+        4
+      ],
+      "utilization_count": 2,
+      "utilization_rate": 0.5,
+      "train_schedules": [
+        {
+          "train_id": 1,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 184.0,
+          "speed_kmh": 35,
+          "priority": 50.0
+        },
+        {
+          "train_id": 4,
+          "entry_time_minutes": 2.0,
+          "exit_time_minutes": 254.0,
+          "speed_kmh": 25,
+          "priority": 12.5
+        }
+      ],
+      "headway_analysis": [
+        {
+          "first_train": 1,
+          "second_train": 4,
+          "actual_gap_minutes": 2.0,
+          "required_headway_minutes": 1.0,
+          "is_safe": true,
+          "first_speed": 35,
+          "second_speed": 25
+        }
+      ]
+    },
+    "3": {
+      "section_id": 3,
+      "from_station": 1,
+      "to_station": 3,
+      "route_name": "Station 1 → Station 3",
+      "distance_km": 180,
+      "max_speed_kmh": 60,
+      "trains_using": [
+        2
+      ],
+      "utilization_count": 1,
+      "utilization_rate": 0.25,
+      "train_schedules": [
+        {
+          "train_id": 2,
+          "entry_time_minutes": 190.0,
+          "exit_time_minutes": 370.0,
+          "speed_kmh": 60,
+          "priority": 45.0
+        }
+      ],
+      "headway_analysis": []
+    },
+    "4": {
+      "section_id": 4,
+      "from_station": 3,
+      "to_station": 1,
+      "route_name": "Station 3 → Station 1",
+      "distance_km": 180,
+      "max_speed_kmh": 60,
+      "trains_using": [
+        3
+      ],
+      "utilization_count": 1,
+      "utilization_rate": 0.25,
+      "train_schedules": [
+        {
+          "train_id": 3,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 180.0,
+          "speed_kmh": 60,
+          "priority": 50.0
+        }
+      ],
+      "headway_analysis": []
+    },
+    "5": {
+      "section_id": 5,
+      "from_station": 1,
+      "to_station": 4,
+      "route_name": "Station 1 → Station 4",
+      "distance_km": 135,
+      "max_speed_kmh": 45,
+      "trains_using": [
+        1,
+        4
+      ],
+      "utilization_count": 2,
+      "utilization_rate": 0.5,
+      "train_schedules": [
+        {
+          "train_id": 1,
+          "entry_time_minutes": 186.0,
+          "exit_time_minutes": 366.0,
+          "speed_kmh": 45,
+          "priority": 50.0
+        },
+        {
+          "train_id": 4,
+          "entry_time_minutes": 256.0,
+          "exit_time_minutes": 580.0,
+          "speed_kmh": 25,
+          "priority": 12.5
+        }
+      ],
+      "headway_analysis": [
+        {
+          "first_train": 1,
+          "second_train": 4,
+          "actual_gap_minutes": 70.0,
+          "required_headway_minutes": 1.0,
+          "is_safe": true,
+          "first_speed": 45,
+          "second_speed": 25
+        }
+      ]
+    },
+    "6": {
+      "section_id": 6,
+      "from_station": 4,
+      "to_station": 1,
+      "route_name": "Station 4 → Station 1",
+      "distance_km": 135,
+      "max_speed_kmh": 45,
+      "trains_using": [
+        2
+      ],
+      "utilization_count": 1,
+      "utilization_rate": 0.25,
+      "train_schedules": [
+        {
+          "train_id": 2,
+          "entry_time_minutes": 0,
+          "exit_time_minutes": 188.0,
+          "speed_kmh": 45,
+          "priority": 45.0
+        }
+      ],
+      "headway_analysis": []
+    }
+  },
+  "timeline_events": [
+    {
+      "time_minutes": 0,
+      "time_seconds": 0,
+      "train_id": 1,
+      "station_id": 2,
+      "station_name": "Station 2",
+      "section_id": 2,
+      "event_type": "departure",
+      "priority": 50.0,
+      "speed_kmh": 35
+    },
+    {
+      "time_minutes": 0,
+      "time_seconds": 0,
+      "train_id": 2,
+      "station_id": 4,
+      "station_name": "Station 4",
+      "section_id": 6,
+      "event_type": "departure",
+      "priority": 45.0,
+      "speed_kmh": 45
+    },
+    {
+      "time_minutes": 0,
+      "time_seconds": 0,
+      "train_id": 3,
+      "station_id": 3,
+      "station_name": "Station 3",
+      "section_id": 4,
+      "event_type": "departure",
+      "priority": 50.0,
+      "speed_kmh": 60
+    },
+    {
+      "time_minutes": 2.0,
+      "time_seconds": 120.0,
+      "train_id": 4,
+      "station_id": 2,
+      "station_name": "Station 2",
+      "section_id": 2,
+      "event_type": "departure",
+      "priority": 12.5,
+      "speed_kmh": 25
+    },
+    {
+      "time_minutes": 180.0,
+      "time_seconds": 10800.0,
+      "train_id": 3,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 4,
+      "event_type": "arrival",
+      "priority": 50.0,
+      "speed_kmh": 60
+    },
+    {
+      "time_minutes": 182.0,
+      "time_seconds": 10920.0,
+      "train_id": 3,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 1,
+      "event_type": "departure",
+      "priority": 50.0,
+      "speed_kmh": 35
+    },
+    {
+      "time_minutes": 184.0,
+      "time_seconds": 11040.0,
+      "train_id": 1,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 2,
+      "event_type": "arrival",
+      "priority": 50.0,
+      "speed_kmh": 35
+    },
+    {
+      "time_minutes": 186.0,
+      "time_seconds": 11160.0,
+      "train_id": 1,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 5,
+      "event_type": "departure",
+      "priority": 50.0,
+      "speed_kmh": 45
+    },
+    {
+      "time_minutes": 188.0,
+      "time_seconds": 11280.0,
+      "train_id": 2,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 6,
+      "event_type": "arrival",
+      "priority": 45.0,
+      "speed_kmh": 45
+    },
+    {
+      "time_minutes": 190.0,
+      "time_seconds": 11400.0,
+      "train_id": 2,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 3,
+      "event_type": "departure",
+      "priority": 45.0,
+      "speed_kmh": 60
+    },
+    {
+      "time_minutes": 254.0,
+      "time_seconds": 15240.0,
+      "train_id": 4,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 2,
+      "event_type": "arrival",
+      "priority": 12.5,
+      "speed_kmh": 25
+    },
+    {
+      "time_minutes": 256.0,
+      "time_seconds": 15360.0,
+      "train_id": 4,
+      "station_id": 1,
+      "station_name": "Station 1",
+      "section_id": 5,
+      "event_type": "departure",
+      "priority": 12.5,
+      "speed_kmh": 25
+    },
+    {
+      "time_minutes": 362.0,
+      "time_seconds": 21720.0,
+      "train_id": 3,
+      "station_id": 2,
+      "station_name": "Station 2",
+      "section_id": 1,
+      "event_type": "arrival",
+      "priority": 50.0,
+      "speed_kmh": 35
+    },
+    {
+      "time_minutes": 366.0,
+      "time_seconds": 21960.0,
+      "train_id": 1,
+      "station_id": 4,
+      "station_name": "Station 4",
+      "section_id": 5,
+      "event_type": "arrival",
+      "priority": 50.0,
+      "speed_kmh": 45
+    },
+    {
+      "time_minutes": 370.0,
+      "time_seconds": 22200.0,
+      "train_id": 2,
+      "station_id": 3,
+      "station_name": "Station 3",
+      "section_id": 3,
+      "event_type": "arrival",
+      "priority": 45.0,
+      "speed_kmh": 60
+    },
+    {
+      "time_minutes": 580.0,
+      "time_seconds": 34800.0,
+      "train_id": 4,
+      "station_id": 4,
+      "station_name": "Station 4",
+      "section_id": 5,
+      "event_type": "arrival",
+      "priority": 12.5,
+      "speed_kmh": 25
+    }
+  ],
+  "dynamic_headway_analysis": {
+    "min_headway_used": 1.0,
+    "safety_margin_applied": 1.5,
+    "total_section_conflicts_analyzed": 2,
+    "safe_headway_count": 2,
+    "description": "Dynamic headway calculations based on relative train speeds allow faster trains to follow slower trains more closely, while requiring larger gaps when slower trains follow faster ones."
+  },
+  "performance_metrics": {
+    "total_completion_time_minutes": 1678.0,
+    "average_completion_time_minutes": 419.5,
+    "total_delay_minutes": 22.0,
+    "average_delay_minutes": 5.5,
+    "running_trains_count": 4,
+    "stopped_trains_count": 0,
+    "success_rate_percent": 100.0,
+    "dynamic_headway_efficiency": "Applied based on relative train speeds"
+  },
+  "simulation_data": {
+    "min_headway_seconds": 60.0,
+    "safety_margin": 1.5,
+    "time_unit": "minutes",
+    "distance_unit": "kilometers",
+    "speed_unit": "km/h"
+  }
+}

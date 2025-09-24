@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-09-24T22:36:29.149178",
+  "model_type": "Enhanced Dynamic Headway Scheduling",
+  "performance_metrics": {
+    "total_completion_time_minutes": 1678.0,
+    "average_completion_time_minutes": 419.5,
+    "total_delay_minutes": 22.0,
+    "average_delay_minutes": 5.5,
+    "running_trains_count": 4,
+    "stopped_trains_count": 0,
+    "success_rate_percent": 100.0,
+    "dynamic_headway_efficiency": "Applied based on relative train speeds"
+  },
+  "dynamic_headway_summary": {
+    "min_headway_used": 1.0,
+    "safety_margin_applied": 1.5,
+    "total_section_conflicts_analyzed": 2,
+    "safe_headway_count": 2,
+    "description": "Dynamic headway calculations based on relative train speeds allow faster trains to follow slower trains more closely, while requiring larger gaps when slower trains follow faster ones."
+  },
+  "train_summary": {
+    "1": {
+      "status": "completed",
+      "completion_time": 366.0,
+      "delay": 6.0,
+      "route": "Station 2 → Station 4",
+      "max_speed": 100
+    },
+    "2": {
+      "status": "completed",
+      "completion_time": 370.0,
+      "delay": 10.0,
+      "route": "Station 4 → Station 3",
+      "max_speed": 90
+    },
+    "3": {
+      "status": "completed",
+      "completion_time": 362.0,
+      "delay": 2.0,
+      "route": "Station 3 → Station 2",
+      "max_speed": 100
+    },
+    "4": {
+      "status": "completed",
+      "completion_time": 580.0,
+      "delay": 4.0,
+      "route": "Station 2 → Station 4",
+      "max_speed": 25
+    }
+  }
+}
